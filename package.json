@@ -1,0 +1,14 @@
+{
+  "name": "dynamodb-to-kinesis",
+  "version": "0.1.0",
+  "description": "Extract DynamoDB items to dispatch into Kinesis Stream",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "node tests/scratch.js"
+  },
+  "author": "Pierre Tomasina <pierre.tomasina@continuousphp.com> (continuousphp.com)",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.84.0"
+  }
+}
