@@ -46,7 +46,7 @@ The run method can accept 3 optional arguments:
 ```javascript
 'use strict'
 
-const DyKi = require('../src/main');
+const DyKi = require('dyki');
 const tableName = 'env.project.dynamodb.table';  //Related to your ARN name
 const streamName = 'env.project.kinesis.stream'; //Related to your ARN name
 const startKey = {
