@@ -1,4 +1,6 @@
-DynamoDB to Kinesis
+# DynamoDB to Kinesis
+
+[![NPM](https://nodei.co/npm/dyki.svg?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/dyki/)
 
 This library will scan a DynamoDB table to dispatch JSON event to Kinesis Stream.
 
@@ -22,21 +24,23 @@ The system is really simple, you just have to Instance a new client with `DyKi.C
 and specify the DynamoDB table, Kinesis stream name, and the region associate.
 
 A 4th parameter is a configuration object:
-    - `delay: number` adjust the delay in millisecond between two scan
-    - `dyCapacityUnitLimit: number` defined a dynamodb capacity unit limit to stop scan if it's reached
-    - `progressCallbackInterval: number` interval in millisecond for calling progress callback 
+
+* `delay: number` adjust the delay in millisecond between two scan
+* `dyCapacityUnitLimit: number` defined a dynamodb capacity unit limit to stop scan if it's reached
+* `progressCallbackInterval: number` interval in millisecond for calling progress callback 
 
 then you can call the `run` method to start the scan stream to kinesis.
 it returns a promise where your callback will call at the end of a full scan.
 (until scan result do not contain lastEvaluatedKey).
 
 The run method can accept 3 optional arguments:
-    - the number of results paginates for each scan
-    - the ExclusiveStartKey object for dynamoDB (useful to start at a specific point of time)
-    - callback function calls in an interval to give information with the following object in argument:
-        - `lastEvaluatedKey: ` item primary key from the last scan
-        - `total: number` Total of items already analyzed
-        - `consumedUnitCapacity: number` The consumed unit capacity of table from the last scan
+
+- the number of results paginates for each scan
+- the ExclusiveStartKey object for dynamoDB (useful to start at a specific point of time)
+- callback function calls in an interval to give information with the following object in argument:
+    - `lastEvaluatedKey: ` item primary key from the last scan
+    - `total: number` Total of items already analyzed
+    - `consumedUnitCapacity: number` The consumed unit capacity of table from the last scan
 
 
 ```javascript
@@ -76,7 +80,13 @@ client.run(25, startKey, progressCallback).then(info => {
 });
 ```
 
-## Question, Contribution?
+## Contribution
+
+Fork :book:
+Push :runner:
+PR :clap:
+
+## Question?
 
 If you have any question, recommendation, or improvement.
 Or even if you use this class and it's useful for you,
