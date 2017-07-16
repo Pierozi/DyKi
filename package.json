@@ -1,5 +1,5 @@
 {
-  "name": "dynamodb-to-kinesis",
+  "name": "dyki",
   "version": "0.1.0",
   "description": "Extract DynamoDB items to dispatch into Kinesis Stream",
   "main": "src/main.js",
@@ -9,6 +9,8 @@
   "author": "Pierre Tomasina <pierre.tomasina@continuousphp.com> (continuousphp.com)",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.84.0"
+    "aws-sdk": "^2.84.0",
+    "base-64": "^0.1.0",
+    "when": "^3.7.8"
   }
 }
