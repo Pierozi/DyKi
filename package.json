@@ -1,13 +1,35 @@
 {
   "name": "dyki",
-  "version": "0.1.0",
-  "description": "Extract DynamoDB items to dispatch into Kinesis Stream",
+  "version": "1.0.0",
+  "description": "Scan DynamoDB items to dispatch into Kinesis Stream",
+  "keywords": [
+      "aws",
+      "serverless",
+      "amazon web service",
+      "dynamodb",
+      "kinesis",
+      "stream",
+      "elastic"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/pierozi/dyki"
+  },
+  "bugs": "https://github.com/pierozi/dyki/issues",
+  "maintainers": [{
+	  "name": "Pierre Tomasina",
+      "web": "http://continuous.lu"
+  }],
+  "contributors": [{
+	  "name": "Pierre Tomasina",
+      "web": "http://continuous.lu"
+  }],
   "main": "src/main.js",
   "scripts": {
     "test": "node tests/scratch.js"
   },
-  "author": "Pierre Tomasina <pierre.tomasina@continuousphp.com> (continuousphp.com)",
-  "license": "ISC",
+  "author": "Pierre Tomasina <pierre.tomasina@continuous.lu> (continuous.lu)",
+  "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.84.0",
     "base-64": "^0.1.0",
