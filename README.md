@@ -28,6 +28,8 @@ A 4th parameter is a configuration object:
 * `delay: number` adjust the delay in millisecond between two scan
 * `dyCapacityUnitLimit: number` defined a dynamodb capacity unit limit to stop scan if it's reached
 * `progressCallbackInterval: number` interval in millisecond for calling progress callback 
+* `primaryKeyName: string` the name of your primary key (default: 'uuid')
+* `primaryKeyType: string` the dynamoDB type of your primary key (default: 'S')
 
 then you can call the `run` method to start the scan stream to kinesis.
 it returns a promise where your callback will call at the end of a full scan.
