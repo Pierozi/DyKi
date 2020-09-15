@@ -1,1 +1,0 @@
-pregerisk.js

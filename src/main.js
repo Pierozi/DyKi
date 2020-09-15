@@ -9,8 +9,6 @@ DyKi.Config = {
     dyCapacityUnitLimit: 5,
     delay: 1000,
     progressCallbackInterval: 1000,
-    primaryKeyName: 'uuid',
-    primaryKeyType: 'S',
 };
 
 DyKi.Error = class extends Error {};
@@ -137,7 +135,7 @@ DyKi.Client = class {
 
         const params = {
             Data: JSON.stringify(record),
-            PartitionKey: item[this.config.primaryKeyName][this.config.primaryKeyType],
+            PartitionKey: (Math.random()*10000000000000000).toString(),
             StreamName: this.streamName,
         };
 
